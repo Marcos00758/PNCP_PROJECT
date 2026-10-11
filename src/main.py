@@ -16,18 +16,24 @@ print(len(dados_publicacao["data"]))
 print(dados_publicacao["totalRegistros"])
 print(dados_publicacao["data"][0])
 print(dados_publicacao["data"][0].keys())
+print(dados_publicacao["totalPaginas"])
+# for indice, contratacao in enumerate(dados_publicacao["data"], start=1):
+#     razao_social = contratacao["orgaoEntidade"]["razaoSocial"]
+#     municipio_nome = contratacao["unidadeOrgao"]["municipioNome"]
+#     objeto_compra = contratacao["objetoCompra"]
+#     valor_total_estimado = contratacao['valorTotalEstimado']
+#     valor_total_homologado = contratacao["valorTotalHomologado"]
 
-for indice, contratacao in enumerate(dados_publicacao["data"], start=1):
-    razaoSocial = contratacao["orgaoEntidade"]["razaoSocial"]
-    municipioNome = contratacao["unidadeOrgao"]["municipioNome"]
-    objetoCompra = contratacao["objetoCompra"]
-    valorTotalEstimado = contratacao['valorTotalEstimado']
-    valorTotalHomologado = contratacao["valorTotalHomologado"]
-
-    lista_de_dados = [razaoSocial, municipioNome, objetoCompra, valorTotalEstimado, valorTotalHomologado]    
-    print(indice, ": ")
-    for item in lista_de_dados:
-        if item == None:
-            print(f"{item=} esta vazio na contratação {indice}")
-        else:
-            print(item)
+#     dict_de_dados = {
+#     "razao_social": razao_social,
+#     "municipio": municipio_nome,
+#     "objeto_compra": objeto_compra,
+#     "valor_total_estimado": valor_total_estimado,
+#     "valor_total_homologado": valor_total_homologado
+# }
+#     print(indice, ": ")
+#     for chave, item in dict_de_dados.items():
+#         if item is None:
+#             print(f"{chave} esta vazio na contratação {indice}")
+#         else:
+#             print(item)
